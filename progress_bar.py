@@ -4,4 +4,10 @@ class ProgressBar:
                   "|----+----|----+----|----+----|----+----|----+----|"]
     
     self.track = "="
-    
+    self.render_gui()
+
+  def render_gui(self):
+    for row in self.graph:
+      print(row)
+        
+    print(self.track, end='\r')
