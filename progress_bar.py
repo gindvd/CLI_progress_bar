@@ -19,7 +19,7 @@ class ProgressBar:
       self.render_track(progress)
       
       if percentage_value == 100:
-      print("\n\nCompleted! All files renamed.")
+        print("\n\nCompleted! All files renamed.")
 
     def render_track(self, progress):
       print("{}".format(self.track * (progress + 1)), end='\r')
