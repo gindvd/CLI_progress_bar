@@ -12,14 +12,14 @@ class ProgressBar:
         
     print(self.track, end='\r')
 
-    def update(self, percentage):
-      # Graph is 50 characters wide, each character represents 2%
-      progress = percentage // 2
-      
-      self.render_track(progress)
-      
-      if percentage == 100:
-        print("\n\nCompleted! All files renamed.")
+  def update(self, percentage):
+    # Graph is 50 characters wide, each character represents 2%
+    progress = percentage // 2
+    
+    self.render_track(progress)
+    
+    if percentage == 100:
+      print("\n\nCompleted! All files renamed.")
 
-    def render_track(self, progress):
-      print("{}".format(self.track * (progress + 1)), end='\r')
+  def render_track(self, progress):
+    print("{}".format(self.track * (progress + 1)), end='\r')
